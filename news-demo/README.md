@@ -56,7 +56,9 @@ new Vue({
   render: h => h(App)
 })
 ```
+
     - routerConfig.js文件
+    
 ```
 /* 引入组件 */
 import Home from './components/Home.vue'
