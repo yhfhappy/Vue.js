@@ -1,8 +1,8 @@
 export default{
-    showHeader:(commit) => {
+    showHeader:({commit}) => {
         commit('showHeader')
     },
-    hideHeader:(commit) => {
+    hideHeader:({commit}) => {
         commit('hideHeader')
     }
 }
