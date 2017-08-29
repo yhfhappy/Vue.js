@@ -34,7 +34,9 @@ exclude: /node_modules/
 
 8. 在components文件夹下新建各种组件；
 9. 编写路由:
-    - main.js文件：
+
+- main.js文件：
+
 ```
 // 引入路由配置文件
 import routerConfig from './routerConfig.js'
@@ -57,7 +59,7 @@ new Vue({
 })
 ```
 
-    - routerConfig.js文件
+- routerConfig.js文件
 
 ```
 /* 引入组件 */
