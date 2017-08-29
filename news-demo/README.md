@@ -57,7 +57,7 @@ new Vue({
 })
 ```
 
-- routerConfig.js文件
+    - routerConfig.js文件
 
 ```
 /* 引入组件 */
