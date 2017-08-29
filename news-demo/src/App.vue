@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavView v-show="headerShow"></NavView>
+    <NavView v-show="true"></NavView>
     <router-view></router-view>
     <FooterView></FooterView>
   </div>
@@ -13,21 +13,21 @@ import FooterView from './components/Footer.vue'
 import {mapGetters,mapActions} from 'vuex'
 
 export default {
-  computed:mapGetters([
-    'headerShow'
-  ]),
+//   computed:mapGetters([
+//     'headerShow'
+//   ]),
 
   /* 监听路由变化 */
-  watch:{
-    $route(to,from){
-      // console.log(to,from);
-      if(to.path=='/mydoc'){
-        this.$store.dispatch('hideHeader');
-      }else{
-        this.$store.dispatch('showHeader');
-      }
-    }
-  },
+  // watch:{
+  //   $route(to,from){
+  //     // console.log(to,from);
+  //     if(to.path=='/mydoc'){
+  //       this.$store.dispatch('hideHeader');
+  //     }else{
+  //       this.$store.dispatch('showHeader');
+  //     }
+  //   }
+  // },
   components:{
     NavView,
     FooterView
