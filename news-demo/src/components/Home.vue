@@ -4,53 +4,15 @@
             <BannerView></BannerView>
             <div class="newsList">
               <ul>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
+                    <li v-for="(item,index) in arrList">
+                        <!-- <a href="conText.html">
+                            <h2>{{index + '.' + item.title}}</h2>
+                            <p>{{item.detail}}</p>
+                        </a> -->
+                        <router-link :to="'/article/' + item.id">
+                            <h2>{{index + '.' + item.title}}</h2>
+                            <p>{{item.detail}}</p>
+                        </router-link>
                     </li>
                 </ul>
             </div>
@@ -62,8 +24,28 @@
     import BannerView from './Banner.vue'
 
     export default{
+        data(){
+            return {
+                arrList:[]
+            }
+        },
         components:{
             BannerView
+        },
+        mounted(){
+            // 获取数据
+            this.fetchData();
+        },
+        methods:{
+            fetchData(){
+                var _this = this;
+
+                this.$http.get('src/data/index.data').then(function(res){
+                    _this.arrList = res.data;
+                }).catch(function(err){
+                    console.log('Home',err)
+                });
+            }
         }
     }
 </script>

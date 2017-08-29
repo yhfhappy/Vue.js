@@ -1,9 +1,12 @@
 <template>
   <div id="app">
+    <loading v-show="loading"></loading>
     <NavView v-show="headerShow"></NavView>
-    <keep-alive>
-      <router-view></router-view>
-    </keep-alive>
+    <transition name="slide-down">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
     <FooterView></FooterView>
   </div>
 </template>
@@ -16,7 +19,8 @@ import {mapGetters,mapActions} from 'vuex'
 
 export default {
   computed:mapGetters([
-    'headerShow'
+    'headerShow',
+    'loading'
   ]),
 
   /* 监听路由变化 */
@@ -57,4 +61,16 @@ export default {
 
 <style>
   @import './assets/css/index.css';
+
+  .slide-down-enter-active,
+  .slide-down-leave-active{
+    transition: .4s all ease;
+    opacity: 0.7;
+    transform: translate3d(0,6em,0);
+  }
+
+   .slide-down-enter,
+   .slide-down-leave{
+      opacity: 0.2;
+  }
 </style>

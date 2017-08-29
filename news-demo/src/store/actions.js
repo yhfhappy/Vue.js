@@ -4,5 +4,11 @@ export default{
     },
     hideHeader:({commit}) => {
         commit('hideHeader')
+    },
+    showLoading:({commit}) => {
+        commit('showLoading')
+    },
+    hideLoading:({commit}) => {
+        commit('hideLoading')
     }
 }

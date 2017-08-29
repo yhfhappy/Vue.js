@@ -1,5 +1,8 @@
 export default{
-    headerShow:(state)=>{
+    headerShow:(state) => {
         return state.header;
+    },
+    loading:(state) => {
+        return state.loading;
     }
 }

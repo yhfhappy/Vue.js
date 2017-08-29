@@ -106,3 +106,8 @@ types.js
 2. 下载vuex：cnpm install vuex -D
 3. 引入Vuex：import Vuex from 'vuex'
 4. 使用Vuex：Vue.use(Vuex);
+
+## 问题：
+
+1. 用Vuex管理mydoc页面让头部消失时，在原地址刷新后又加上了头部；
+    - 想法：会不会是刷新这个动作让它找不到to的路径呢？

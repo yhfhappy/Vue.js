@@ -3,52 +3,10 @@
         <div class="content mt50">
             <div class="newsList">
               <ul>
-                    <li>
-                      <a href="conText.html">
-                            <h2>这是栏目的组件1</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>这是栏目的组件2</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>这是栏目的组件3</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>这是栏目的组件</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
-                        </a>
-                    </li>
-                    <li>
-                      <a href="conText.html">
-                            <h2>还可以降低首付款健身房还可以降低首付款健身房还可以降低首付款健身房333</h2>
-                            <p>还可以降低首付款健还可以降低首付款健身房还可以降低首付款健身房身房还可以降低首付款健还可以降低首付款健身房身房</p>
+                    <li v-for="(item,index) in arrList">
+                        <a href="conText.html">
+                            <h2>{{index + '.' + item.title}}</h2>
+                            <p>{{item.detail}}</p>
                         </a>
                     </li>
                 </ul>
@@ -58,7 +16,28 @@
 </template>
 
 <script>
+export default {
+    data(){
+        return {
+            arrList:[]
+        }
+    },
+    mounted(){
+        // 获取数据
+        this.fetchData();
+    },
+    methods:{
+        fetchData(){
+            var _this = this;
 
+            this.$http.get('src/data/follow.data').then(function(res){
+                _this.arrList = res.data;
+            }).catch(function(err){
+                console.log('Follow',err)
+            });
+        }
+    }
+}
 </script>
 
 <style scoped>

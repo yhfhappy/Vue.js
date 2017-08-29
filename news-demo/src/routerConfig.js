@@ -4,6 +4,7 @@ import Follow from './components/Follow.vue'
 import Column from './components/Column.vue'
 import userInfo from './components/User.vue'
 import Mydoc from './components/Mydoc.vue'
+import Article from './components/Article.vue'
 
 /* 导出组件 */
 export default [
@@ -26,6 +27,10 @@ export default [
     {
         path:'/mydoc',
         component:Mydoc
+    },
+    {
+        path:'/article/:id',
+        component:Article
     },
     {path:'*', redirect:'/home'}
 ]
