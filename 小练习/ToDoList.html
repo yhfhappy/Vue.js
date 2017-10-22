@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8" />
+<title>To Do List</title>
+<script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.js"></script>
+
+<style>
+    .todostate{
+        text-decoration: line-through;
+        color: gray;
+    }
+</style>
+
+<script>
+window.onload = ()=>{
+    let vm = new Vue({
+        el:"#app",
+
+        data:{
+            //todostate:"todostate",
+            //istodo:true,
+            todotext:"",
+            todos:[
+                {text:"学习VueJS",done:true},
+                {text:"学习AngularJS",done:false},
+                {text:"学习react",done:true},
+                {text:"学习English",done:false},
+                {text:"学习Python",done:false}
+            ]
+        },
+
+        mounted:function(){
+            this.$nextTick(function(){
+                this.todoCount();
+            });
+        },
+
+        methods:{
+            todoCount:function(){
+                var count = 0;
+
+                this.todos.forEach(function(item){
+                    count += item.done?0:1;
+                })
+
+                return count;
+            },
+
+            addTodo:function(){
+                this.todos.push({
+                    text:this.todotext,
+                    done:false
+                });
+
+                this.todotext = "";
+            }
+        }
+    });
+};
+</script>
+</head>
+
+<body>
+<div id="app">
+    <span>还剩下 {{todoCount()}} 项工作，总共有 {{todos.length}} 项工作。</span>
+
+    <ul>
+        <li v-for="todo in todos">
+            <!-- 单选框和复选框的选中可以直接通过v-model渲染 -->
+            <input type="checkbox" v-model="todo.done" />
+            <!-- {todostate:todo.done}表示如果为真就加，假就不加 -->
+            <span :class="{todostate:todo.done}">{{todo.text}}</span>
+        </li>
+    </ul>
+
+    <input type="text" v-model="todotext" />
+    <input type="button" value="提交" v-on:click="addTodo" />
+</div>
+</body>
+</html>
