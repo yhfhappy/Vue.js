@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+function(){};
 
 // 引入过滤器
 import filters from './filters'

@@ -70,7 +70,7 @@ window.onload = ()=>{
         <li v-for="todo in todos">
             <!-- 单选框和复选框的选中可以直接通过v-model渲染 -->
             <input type="checkbox" v-model="todo.done" />
-            <!-- {todostate:todo.done}表示如果为真就加，假就不加 -->
+            <!-- {todostate:todo.done}表示如果为真就加，为假就不加 -->
             <span :class="{todostate:todo.done}">{{todo.text}}</span>
         </li>
     </ul>
