@@ -1,0 +1,58 @@
+{
+  "status":"1",
+  "result":{    
+      "basicInformation":"基本信息",
+      "personalInformation":"殷红富 / 男",
+      "graduatedSchool":"西南林业大学",
+      "personalProfessional":"生物技术",
+      "postInfo":"前端工程师",
+      "currAddress":"云南昆明",
+      "currSituation":"可随时到岗",
+
+      "contactNumber":"联系方式",
+      "wechat":"yhfhome",
+      "QQ":"624373806",
+      "email":"yhfhappy@gmail.com",
+      "tel":"18788118656",
+      "Github":"github.com/yhfhappy",
+
+      "mainSkills":"主要技能",
+      "skillList":["HTML5","CSS3","Javascrip","jQuery","Ajax","AngularJS","Vue.js","ES6","Less"],
+
+      "skillsDetail":"技能详解",
+
+      "skillContent":[
+          {
+            "title":"HTML5 / CSS3 / LESS",
+            "content":"能够编写语义化的HTML，熟练运用 div+css 浮动布局，flexbox 弹性布局。熟悉LESS书写，webpack自动化工具的运用，进行模块化开发。"
+          },
+          {
+            "title":"JavaScript",
+            "content":"熟悉原生的JavaScript，对原型，原型链，对象，闭包等都有一定的了解。能脱离jQuery等库编写一些常见的功能。"
+          },
+          {
+            "title":"jQuery",
+            "content":"熟悉jQuery的用法，能使用jQuery快速完成常见功能的开发。"
+          },
+          {
+            "title":"Bootstrap",
+            "content":"熟悉Bootstrap框架，使用栅格系统，媒体查询，Bootstrap组件，来完成响应式的页面开发。"
+          },
+          {
+            "title":"Git / Ajax / JSON / ES6",
+            "content":"有自己的github账号，能使用git实现代码的上传、分支合并、克隆、版本回滚、等常用的一些操作。掌握npm包管理工具的使用，能使用ES6语法进行开发。"
+          },
+          {
+            "title":"Vue.js and AngularJS",
+            "content":"熟悉 Vue.js 和 AngularJS 的使用。"
+          },
+          {
+            "title":"Node.js",
+            "content":"会一点 Node.js，jade和ejs做模板渲染。了解 MySQL 的基本操作，如：增、删、改、查。"
+          }
+      ],
+
+      "selfTitle":"自我评价",
+      "selfEvaluation":"<p>个人对于计算机方面是非常有兴趣的，特别享受一边敲代码一边听音乐的乐趣。 平时我就是一个很细心的人，对于代码方面更是如此，尽最大的努力精确到1px，不能接受标签胡乱嵌套，命名不规范，无用或重复的代码等等问题，追求完美。</p><p>对待问题首先自己折腾解决，享受解决问题之后的快感，有种肾上腺素飙升的感觉。</p>"
+  }
+}

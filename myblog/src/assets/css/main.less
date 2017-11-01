@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+// Less部分 START
+// 圆角（混合模式）
+.border-radius(@radius:6px){
+    //chrome Safari
+    -webkit-border-radius: @radius;
+    //firefox
+    -moz-border-radius: @radius;
+    //IE 360等
+    -ms-border-radius: @radius;
+    //opera
+    -o-border-radius: @radius;
+    //标准样式
+    border-radius: @radius;
+}
+
+// 动画（混合模式）
+.transition(@transition:0.2s){
+    //chrome Safari
+    -webkit-transition: @transition;
+    //firefox
+    -moz-transition: @transition;
+    //IE 360等
+    -ms-transition: @transition;
+    //opera
+    -o-transition: @transition;
+    //标准样式
+    transition: @transition;
+}
+
+// 边框（混合模式）
+.border(@borderWidth:1px){
+    border: @borderWidth solid #CCC;
+}
+
+// displayflex兼容
+.displayflex{
+    display: flex;
+    display: -webkit-flex;
+}
+
+.comWidth{
+    width: 12rem;
+    margin: 0 auto;
+}
+
+@headerHeight: 56px;
+@marginAuto: 0 auto;
+@iconPadding: 6px;
+
+// Less部分 END
+
+/* header START */
+.main_wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    width: 3rem;
+    font-size: .14rem;
+    color: #FFF;
+    background-color: gray;
+    .displayflex;
+    flex-direction: column;
+    vertical-align: middle;
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    & img{
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        margin: .2rem auto;
+    }
+
+    & hgroup h1{
+        font-size: .18rem;
+        font-weight: normal;
+        text-align: center;
+        letter-spacing: 4px;
+        text-shadow:-1px 0 #fff,0 -1px #fff,1px 0 #333,0 1px #333;
+    }
+
+    & hgroup h2{
+        font-size: .16rem;
+        font-weight: normal;
+        text-align: center;
+        margin-top: .06rem;
+    }
+}
+
+.introItem{
+    font-size: .18rem;
+    width: 1.8rem;
+    height: .5rem;
+    line-height: .5rem;
+    margin: .24rem auto;
+    .displayflex;
+    flex-direction: row;
+    justify-content: space-around;
+    // background-color: #F9E045;
+    background-color: #FFF;
+    opacity: 0.8;
+    cursor: pointer;
+    .border-radius;
+
+    & i{
+        padding-right: .06rem;
+    }
+
+    & a{
+        color: #000;
+        display: inline-block;
+        .transition;
+    }
+
+    & a:hover{
+        color: red;
+    }
+}
+
+.responsive-nav {
+    width: 26px;
+    height: 26px;
+}
+
+.responsive-nav span {
+    height: 3px;
+    display: none;
+    background-color: #4caf50;
+    margin: 4px 3px 0;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition: all .6s;
+    transition: all .6s;
+}
+/* header END */
+
+/* 主体部分 START */
+.container{
+    width: 9rem;
+    height: 100%;
+    box-sizing: border-box;
+    padding: .2rem;
+    .displayflex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & figure{
+        width: 48%;
+        padding: .06rem;
+        margin-bottom: .2rem;
+        background-color: #FFF;
+        box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.06);
+        .transition;
+
+        & h4{
+            color: #404040;
+            text-align: center;
+        }
+
+        & img{
+            width: 70%;
+            margin: .1rem auto;
+        }
+
+        & figcaption{
+            font-size: .14rem;
+            color: #adadad;
+            margin: .1rem 0;
+        }  
+    }
+
+    & figure:hover{
+        box-shadow: 2px 6px 6px 0 rgba(0, 0, 0, 0.06);
+        .transition;
+    } 
+}
+
+.itemAddr{
+    width: 50%;
+    .displayflex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    text-align: center;
+    line-height: .3rem;
+
+    & a{
+        color: #FFF;
+        display: block;
+        width: .8rem;
+        height: .3rem;
+        .border-radius;
+        background-color: #CCC;
+        .transition;
+    }
+
+    & a:hover{
+        background-color: #000;
+    }
+}
+/* 主体部分 END */
+
+/* 页面底部 START */
+footer{
+    width: 12rem;
+    height: .4rem;
+    text-align: center;
+    line-height: .4rem;
+    background-color: #e3e3e3;
+    align-self: center;
+}
+/* 页面底部 END */
+
+/* 基本信息 START */
+.resume{
+    .border;
+    background-color: #FFF;
+    vertical-align: middle;
+    box-sizing: border-box;
+    .displayflex;
+    flex-direction: column;
+
+    & dl{
+        padding-bottom: .1rem;
+        margin-bottom: .16rem;    
+    }
+
+    & dt{
+        font-size: .2rem;
+        line-height: .36rem;
+        border-bottom: 1px solid #CCC;
+    }
+
+    & dd{
+        margin-top: .1rem;
+
+        & em{
+            color: #FFF;
+            margin-right: .1rem;
+            margin-bottom: .1rem;
+            display: inline-block;
+            width: .8rem;
+            height: .3rem;
+            line-height: .3rem;
+            text-align: center;
+            background-color: #CCC;
+            .border-radius(4px);
+            cursor: pointer;
+            .transition;
+        }
+
+        & em:hover{
+            background-color: #000;
+        }
+
+        & h4{
+            color: #666;
+            font-size: .18rem;
+            font-weight: normal;
+            line-height: .32rem;
+        }
+    }
+
+    & i{
+        font-size: .2rem;
+        padding-right: .1rem;
+    }
+
+    & p{
+        padding-left: .3rem;
+    }
+
+    & a:hover{
+        color: red;
+    }
+}
+/* 基本信息 END */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container figure{
+        width: 98%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .main_wrap {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .header {
+      width: 100%;
+      height: .5rem;
+      line-height: .5rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .header img {
+      width: .4rem;
+      height: .4rem;
+      margin: 0;
+    }
+    .header hgroup h1 {
+      font-size: .18rem;
+    }
+    .header hgroup h2 {
+      display: none;
+    }
+    .introItem {
+      display: none;
+    }
+    /* header END */
+
+    .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container figure{
+        width: 98%;
+        height: 100%;
+    }
+
+    .responsive-nav,.responsive-nav span {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .main_wrap {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .header {
+      width: 100%;
+      height: .5rem;
+      line-height: .5rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .header img {
+      width: .4rem;
+      height: .4rem;
+      margin: 0;
+    }
+    .header hgroup h1 {
+      font-size: .18rem;
+    }
+    .header hgroup h2 {
+      display: none;
+    }
+    .introItem {
+      display: none;
+    }
+    /* header END */
+
+    .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container figure{
+        width: 98%;
+        height: 100%;
+    }
+
+    .itemAddr a{
+        margin-right: .1rem;
+    }
+
+    .responsive-nav,.responsive-nav span {
+        display: block;
+    }
+}

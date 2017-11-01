@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>产品详细页</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript" src="js/ie6Fixpng.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- headerBar START -->
+<div class="headerBar">
+    <!-- topBar START -->
+    <div class="topBar">
+        <div class="comWidth">
+            <div class="leftArea">
+                <a href="#" class="collection">收藏本站</a>
+            </div>
+
+            <div class="rightArea">
+                欢迎来到悦心物语！
+                <a href="#">[登录]</a>
+                <a href="#">[免费注册]</a>
+            </div>
+        </div>
+    </div>
+    <!-- topBar END -->
+
+    <!-- logoBar START -->
+        <div class="logoBar">
+            <div class="comWidth">
+                <!-- LOGO START -->
+                <div class="logo fl">
+                    <a href="#">
+                        <img src="images/logo.jpg" alt="LOGO" />
+                    </a>
+                </div>
+                <!-- LOGO END -->
+                
+                <!-- 购物步骤 START -->
+                <div class="stepBox fr">
+                    <div class="step"></div>
+                    <ul class="step_text">
+                        <li class="s01 active">我的购物车</li>
+                        <li class="s02 active">填写核对订单</li>
+                        <li class="s03">订单提交成功</li>
+                    </ul>
+                </div>
+                <!-- 购物步骤 END -->
+            </div>
+        </div>
+    <!-- logoBar END -->
+
+</div>
+<!-- headerBar END -->
+
+<div class="shoppingCar comWidth">
+    <div class="shopping_item">
+        <h3 class="shopping_tit">收货地址</h3>
+        <!-- <div class="shopping_cont"></div> -->
+
+        <form action="#" class="shoppingCar_info">
+            <em>*</em>
+            <label for="">选择地区：</label>
+            <select name="" id="sec_area">
+                <option value="">北京市 海淀区 五环内</option>
+                <option value="">中国北京</option>
+                <option value="">中国日本</option>
+            </select>
+            <br />
+            <em>*</em>
+            <label for="sec_addr">详细地址：</label>
+            <input type="text" id="sec_addr" placeholder="最多输入26个汉字…" />
+            <br />
+            <em>*</em>
+            <label for="sec_peop">收&nbsp;货&nbsp;人&nbsp;：</label>
+            <input type="text" id="sec_peop" placeholder="最多输入10个汉字…" />
+            <br />
+            <em>*</em>
+            <label for="">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机&nbsp;：</label>
+            <input type="text" id="sec_phone" placeholder="如：123456789…" />
+            <label for="">或固定电话：</label>
+            <input type="text"  id="sec_areaNum" placeholder="区号" />
+            <span>-</span>
+            <input type="text" id="sec_tell" placeholder="电话号码" />
+            <span>-</span>
+            <input type="text" id="sec_outher" placeholder="分机号（可选）" />
+            
+            <br />
+            <input type="submit" id="sec_btn" value="确认收货地址" />
+
+        </form>
+
+    </div>
+
+    <div class="shopping_item clearfix">
+        <h3 class="shopping_tit">支付方式</h3>
+        <!-- <div class="shopping_cont"></div> -->
+
+        <form action="#" class="shoppingCar_pay">
+            <input type="radio" id="weichat_pay" class="duiqi" />
+            <div id="label">
+                <label for="weichat_pay">微信支付</label>
+                <img src="images/icon/wechat.gif" alt="" />
+                <span>用微信扫一扫就能付款！</span>
+            </div>
+
+            <br />
+
+            <input type="radio" id="shuaka" class="duiqi" />
+            <label id="label" for="shuaka">送货上门后再付款，使用现金或刷银行卡。</label>
+
+        </form>
+    </div>
+
+    <div class="shopping_item">
+        <h3 class="shopping_tit">发票信息</h3>
+        <!-- <div class="shopping_cont"></div> -->
+
+        <form action="#" class="shoppingCar_info">
+            <input type="checkbox" checked="checked" class="checkSec" />
+            <br />
+            <em>*</em>
+            <label for="">发票类型：</label>
+            <select name="" id="sec_area">
+                <option value="">商业零售发票</option>
+                <option value="">个人发票</option>
+            </select>
+
+            <br />
+
+            <em>*</em>
+            <label for="">发票抬头：</label>
+            <select name="" id="sec_area_piao">
+                <option value="">个人</option>
+                <option value="">单位</option>
+            </select>
+            <input type="text" value="阿斯顿" class="sec_address" />
+
+            <br />
+
+            <div class="saveBtn">
+                <a href="#" class="save active">保存</a>
+                <a href="#" class="cancle">取消</a>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="shopping_item">
+        <h3 class="shopping_tit">送货清单<a href="#" class="backCar">返回购物车修改</a></h3>
+        <div class="shopping_cont pb_10">
+            <div class="cart_inner">
+                <div class="cart_head clearfix">
+                    <div class="cart_item t_name">商品名称</div>
+                    <div class="cart_item t_price">单价</div>
+                    <div class="cart_item t_return">返现</div>
+                    <div class="cart_item t_num">数量</div>
+                    <div class="cart_item t_subtotal">小计</div>
+                </div>
+
+                <div class="cart_cont clearfix">
+                    <div class="cart_item t_name">
+                        <div class="cart_shopInfo clearfix">
+                            <img src="images/pad.jpg" alt="" />
+                            <div class="cart_shopInfo_cont">
+                                <p class="cart_link"><a href="#">Apple/苹果 iPad pro 9.7寸12.9寸 玫瑰金香槟金平板电脑</a></p>
+                                <p class="cart_info">[赠品]充电器 平板支架 钢化膜</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_item t_price">￥1459.00元</div>
+                    <div class="cart_item t_return">￥0.00元</div>
+                    <div class="cart_item t_num">
+                        <div class="cart_item_num">
+                            <p class="cart_link">1</p>
+                            <p class="cart_info">1</p>
+                        </div>
+                    </div>
+                    <div class="cart_item t_subtotal t_red">￥1459.00元</div>
+                </div>
+
+                <div class="cart_message">如果你对包裹有特殊要求，请再次留言！</div>
+
+                <div class="cart_prompt"><i class="cart_prompt_icon"></i>抱歉，以下商品无法购买，请选择其它商品！</div>
+
+                <div class="cart_cont cart_no_bor clearfix">
+                    <div class="cart_item t_name">
+                        <div class="cart_shopInfo clearfix">
+                            <img src="images/pad.jpg" alt="" />
+                            <div class="cart_shopInfo_cont">
+                                <p class="cart_link"><a href="#">Apple/苹果 iPad pro 9.7寸12.9寸 玫瑰金香槟金平板电脑</a></p>
+                                <p class="cart_info">[赠品]充电器 平板支架 钢化膜</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="shopping_item clearfix">
+        <h3 class="shopping_tit">订单详情</h3>
+
+        <div class="shopping_cont padding_shop clearfix">
+            <div class="cart_count">
+                <div class="cart_rmb">
+                    <i>总计：</i><span>￥1569.00</span>
+                </div>
+                <div class="cart_btnBox">
+                    <input type="button"class="cart_btn" value="提交订单" />
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+</div>
+
+<div class="hr_25"></div>
+
+<!-- footer START -->
+<div class="footer">
+    <p><a href="#">网站简介</a><i>|</i><a href="#">网站公告</a><i>|</i><a href="#">招纳贤士</a><i>|</i><a href="#">联系我们</a><i>|</i>客服热线：400-675-1234</p>
+    <p>Copyright&nbsp;&copy;&nbsp;2006&nbsp;-&nbsp;2014&nbsp;悦心物语版权所有&nbsp;&nbsp;&nbsp;滇 ICP 备 89289288 号&nbsp;&nbsp;&nbsp;滇 ICP 备 89289288 号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123</p>
+    <p class="web">
+        <a href="#"><img src="images/trust.gif" height="46" width="128" alt="" /></a>
+        <a href="#"><img src="images/trust.gif" height="46" width="128" alt="" /></a>
+        <a href="#"><img src="images/trust.gif" height="46" width="128" alt="" /></a>
+    </p>
+</div>
+<!-- footer END -->
+</body>
+</html>

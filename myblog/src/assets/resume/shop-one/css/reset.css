@@ -1,0 +1,56 @@
+/*margin的样式初始化*/
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd {
+    margin: 0;
+}
+
+/*padding的样式初始化*/
+ul,ol {
+    padding: 0;
+}
+
+/*列表的样式初始化*/
+ul,ol,li {
+    list-style-type: none;
+}
+
+/*font-style的样式初始化*/
+em,i {
+    font-style: normal;
+}
+
+/*下划线的样式初始化*/
+a {
+    text-decoration: none;
+    color: #656565; /*注意：网站链接很多都是一个颜色，在此设置*/
+}
+
+input,select,textarea {
+    border: none;
+    outline: none;
+    background:none;
+}
+
+/* 清浮动 */
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+};
+
+.clearfix{*zoom:1;}
+
+/* 公共 */
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.show{display: block;}
+.hide{display: none;}
+
+.hr_45{
+    height: 45px;
+}
