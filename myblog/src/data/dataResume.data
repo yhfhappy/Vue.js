@@ -39,14 +39,14 @@
     {
       "title":"个人简历",
       "imgAddr":"http://wx3.sinaimg.cn/mw690/9e09759dgy1fl2z3sve72j20wz0oztem.jpg",
-      "demoAddr":"https://yhfhappy.github.io/resume/wuyu-two/index.html",
-      "codeAddr":"https://github.com/yhfhappy/HTML-and-CSS/tree/master/%E5%94%AF%E7%BE%8E%E8%B4%AD%E7%89%A9%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80",
+      "demoAddr":"https://github.com",
+      "codeAddr":"https://github.com/yhfhappy/Vue.js/tree/master/myblog",
       "content":"采用Flex布局，Vue.js做渲染，vue-router做路由，webpack进行打包的个人简历，包括：介绍页和作品展示页。为学习Flex布局的练习小项目。"
     },
     {
       "title":"BootStrap企业网站",
       "imgAddr":"http://wx4.sinaimg.cn/mw690/9e09759dgy1fl31yia2d3j20vz0otqgv.jpg",
-      "demoAddr":"https://yhfhappy.github.io/resume/wuyu-two/index.html",
+      "demoAddr":"https://yhfhappy.github.io/resume/BootStrap%E4%BC%81%E4%B8%9A%E7%BD%91%E7%AB%99/index.html",
       "codeAddr":"https://github.com/yhfhappy/HTML-and-CSS/tree/master/BootStrap%E4%BC%81%E4%B8%9A%E7%BD%91%E7%AB%99",
       "content":"用BootStrap做的一个企业网站，是自己的练手项目，也是笔记，留着以后做参考。"
     }
