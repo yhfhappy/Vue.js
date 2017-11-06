@@ -3,6 +3,7 @@
         <!-- 页面头部 START -->
         <header class="header">
             <img src="../assets/images/logo.jpg" alt="LOGO" />
+            
             <hgroup>
                 <h1>个人简历</h1>
                 <h2>追求卓越，成功就会在不经意间追上你！</h2>
@@ -20,11 +21,11 @@
             </ul>
             
             <!-- 移动端三条线导航 -->
-            <label class="responsive-nav">
+            <!-- <label class="responsive-nav" v-show=false>
                 <span></span>
                 <span></span>
                 <span></span>
-            </label>
+            </label> -->
         </header>
         <!-- 页面头部 END -->
     </div>

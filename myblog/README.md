@@ -13,7 +13,7 @@ npm install
 ## 运行项目
 
 ```
-cnpm install
+npm install
 npm run dev
-cnpm run build
+npm run build
 ```

@@ -39,7 +39,7 @@
     {
       "title":"个人简历",
       "imgAddr":"http://wx3.sinaimg.cn/mw690/9e09759dgy1fl2z3sve72j20wz0oztem.jpg",
-      "demoAddr":"https://github.com",
+      "demoAddr":"https://yhfhappy.github.io/",
       "codeAddr":"https://github.com/yhfhappy/Vue.js/tree/master/myblog",
       "content":"采用Flex布局，Vue.js做渲染，vue-router做路由，webpack进行打包的个人简历，包括：介绍页和作品展示页。为学习Flex布局的练习小项目。"
     },

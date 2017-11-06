@@ -14,7 +14,8 @@ Vue.use(VueRouter);
 // 4.实例化一个路由
 const router = new VueRouter({
     /*去掉栏目名称前面的#号*/
-    mode:'history',
+    // mode:'history',
+    // mode:'hash',
 
     routes:routerConfig
 });
